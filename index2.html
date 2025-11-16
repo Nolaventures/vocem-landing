@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vōcem - Your Expertise, Finally Visible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #e2e8f0;
+            background: #0f172a;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid #1e293b;
+            background: #0f172a;
+        }
+        
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #f1f5f9;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 28px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+        
+        .hero .subheadline {
+            font-size: 21px;
+            font-weight: 400;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            line-height: 1.65;
+            opacity: 0.96;
+            text-align: justify;
+            text-align-last: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 52px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        }
+        
+        .hero-note {
+            margin-top: 20px;
+            font-size: 15px;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+        
+        /* Vōcem Meaning Section */
+        .vocem-meaning {
+            padding: 70px 0;
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .meaning-content {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .etymology {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+        
+        .latin-word {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #818cf8;
+            font-style: italic;
+        }
+        
+        .latin-word.accent {
+            font-size: 40px;
+            color: #a78bfa;
+        }
+        
+        .arrow {
+            font-size: 32px;
+            color: #64748b;
+        }
+        
+        .soundwave {
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+            height: 44px;
+        }
+        
+        .wave {
+            width: 5px;
+            background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+            border-radius: 3px;
+            animation: soundwave 1.2s ease-in-out infinite;
+        }
+        
+        .wave:nth-child(1) { height: 22px; animation-delay: 0s; }
+        .wave:nth-child(2) { height: 38px; animation-delay: 0.1s; }
+        .wave:nth-child(3) { height: 44px; animation-delay: 0.2s; }
+        .wave:nth-child(4) { height: 32px; animation-delay: 0.3s; }
+        .wave:nth-child(5) { height: 28px; animation-delay: 0.4s; }
+        
+        @keyframes soundwave {
+            0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
+            50% { transform: scaleY(1); opacity: 1; }
+        }
+        
+        .translation {
+            font-size: 19px;
+            color: #94a3b8;
+            margin-bottom: 18px;
+            font-weight: 400;
+        }
+        
+        .vocem-tagline {
+            font-size: 24px;
+            color: #818cf8;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 0.3px;
+        }
+        
+        .meaning-text {
+            font-size: 21px;
+            color: #e2e8f0;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .meaning-text strong {
+            color: #818cf8;
+            font-weight: 700;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 90px 0;
+            background: #0f172a;
+        }
+        
+        .section-header {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 64px;
+            color: #f1f5f9;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .problem-card {
+            background: #1e293b;
+            padding: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        
+        .problem-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .problem-content {
+            padding: 32px;
+        }
+        
+        .problem-card h3 {
+            font-size: 23px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #f1f5f9;
+            letter-spacing: -0.3px;
+        }
+        
+        .problem-card p {
+            color: #94a3b8;
+            line-height: 1.75;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .callout {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #818cf8;
+            font-style: italic;
+            margin-top: 48px;
+            line-height: 1.4;
+            font-family: 'Libre Baskerville', serif;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 90px 0;
+            background: #1e293b;
+        }
+        
+        .steps {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 52px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
+        .step-content h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: #f1f5f9;
+            letter-spacing: -0.5px;
+        }
+        
+        .step-content p {
+            color: #94a3b8;
+            line-height: 1.75;
+            font-size: 17px;
+            text-align: justify;
+        }
+        
+        .result {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-top: 48px;
+            padding: 28px;
+            background: #0f172a;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #334155;
+            letter-spacing: 0.3px;
+        }
+        
+        /* AI Conversationalist Section */
+        .conversationalist {
+            padding: 90px 0;
+            background: #0f172a;
+        }
+        
+        .conversationalist-intro {
+            text-align: center;
+            font-size: 20px;
+            max-width: 750px;
+            margin: 0 auto 60px;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+        
+        .conversation-example {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+        }
+        
+        .example-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .example-header h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+        
+        .example-header p {
+            font-size: 17px;
+            color: #818cf8;
+            font-style: italic;
+        }
+        
+        .chat-flow {
+            margin-bottom: 32px;
+        }
+        
+        .chat-message {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        
+        .chat-message.user {
+            flex-direction: row;
+        }
+        
+        .chat-message.assistant {
+            flex-direction: row-reverse;
+        }
+        
+        .chat-avatar {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .chat-message.user .chat-avatar {
+            background: #475569;
+        }
+        
+        .chat-content {
+            flex: 1;
+            background: #0f172a;
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            line-height: 1.7;
+            border: 1px solid #334155;
+        }
+        
+        .chat-message.assistant .chat-content {
+            background: #1e293b;
+            text-align: left;
+        }
+        
+        .chat-content strong {
+            color: #818cf8;
+            font-weight: 600;
+        }
+        
+        .chat-content p {
+            margin: 0;
+            color: #cbd5e1;
+        }
+        
+        .learning-note {
+            background: #422006;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+        
+        .learning-note p {
+            margin: 0;
+            color: #fef3c7;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .learning-note strong {
+            color: #fde68a;
+        }
+        
+        .learning-note em {
+            color: #fcd34d;
+            font-style: italic;
+        }
+        
+        .conversationalist-callout {
+            text-align: center;
+            margin-top: 48px;
+            font-size: 26px;
+            font-weight: 600;
+            color: #818cf8;
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .conversationalist-callout p {
+            margin: 0;
+        }
+        
+        /* Integrations Section */
+        .integrations {
+            padding: 90px 0;
+            background: #1e293b;
+        }
+        
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .integration-group h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 24px;
+        }
+        
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: #0f172a;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: all 0.3s;
+        }
+        
+        .logo-item:hover {
+            transform: translateY(-4px);
+            border-color: #475569;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .logo-item i {
+            font-size: 32px;
+            color: #818cf8;
+            margin-bottom: 12px;
+        }
+        
+        .logo-item span {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        /* Who It's For Section */
+        .audience {
+            padding: 90px 0;
+            background: #0f172a;
+        }
+        
+        .audience .section-header {
+            color: #f8fafc;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 36px;
+            margin-top: 48px;
+        }
+        
+        .audience-card {
+            background: #0f172a;
+            padding: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: 1px solid #334155;
+        }
+        
+        .audience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            border-color: #475569;
+        }
+        
+        .audience-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .audience-content {
+            padding: 32px;
+        }
+        
+        .audience-card h3 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #818cf8;
+            letter-spacing: -0.3px;
+        }
+        
+        .audience-card p {
+            color: #94a3b8;
+            line-height: 1.75;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 90px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .cta-section .subtext {
+            font-size: 19px;
+            margin-bottom: 48px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .email-form {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 18px;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 16px 18px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.97);
+            color: #1e293b;
+            height: 54px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.6);
+        }
+        
+        .submit-button {
+            width: 100%;
+            background: #0f172a;
+            color: white;
+            padding: 18px;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            background: #1e293b;
+        }
+        
+        .form-note {
+            margin-top: 18px;
+            font-size: 15px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+        
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 16px;
+        }
+        
+        footer a:hover {
+            color: #818cf8;
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            .section-header {
+                font-size: 28px;
+            }
+            
+            .problem-grid,
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .chat-message {
+                flex-direction: column !important;
+            }
+            
+            .conversation-example {
+                padding: 24px;
+            }
+            
+            .integrations-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Vōcem <span style="font-size: 14px; font-weight: 400; opacity: 0.7;">(VOH-kem)</span></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Expertise Isn't the Problem.<br>Your Visibility Is.</h1>
+            <p class="subheadline">
+                Board seats. Speaking invitations. Consulting offers. Media quotes. They don't find the smartest person—they find the most visible expert. Vōcem helps you share what you know, so the right opportunities can find you.
+            </p>
+            <a href="#waitlist" class="cta-button">Join the Waitlist</a>
+            <p class="hero-note">Launch Q1 2025 • Founding members get lifetime 50% off</p>
+        </div>
+    </section>
+
+    <!-- Vōcem Meaning Section -->
+    <section class="vocem-meaning">
+        <div class="container">
+            <div class="meaning-content">
+                <div class="etymology">
+                    <div class="latin-word">vōx</div>
+                    <div class="arrow">→</div>
+                    <div class="latin-word accent">vōcem</div>
+                    <div class="arrow">→</div>
+                    <div class="soundwave">
+                        <span class="wave"></span>
+                        <span class="wave"></span>
+                        <span class="wave"></span>
+                        <span class="wave"></span>
+                        <span class="wave"></span>
+                    </div>
+                </div>
+                <p class="translation">From Latin: "voice" → "the voice that" → <strong>"is heard"</strong></p>
+                <p class="vocem-tagline">Your voice, amplified intelligently.</p>
+                <p class="meaning-text">Your research. Your insights. Your expertise. <strong>Finally heard.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-header">The Recognition You Deserve Is Going to Someone Else</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <img src="knowledge.jpg" alt="Person surrounded by papers and books" class="problem-image">
+                    <div class="problem-content">
+                        <h3>Your Knowledge Is Invisible</h3>
+                        <p>200+ saved articles. Years of insights. Deep expertise. All trapped in bookmarks and your head. Nobody knows what you know.</p>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <img src="visibility.jpg" alt="Professional speaking at conference" class="problem-image">
+                    <div class="problem-content">
+                        <h3>Opportunities Find Visible Experts</h3>
+                        <p>Conference speaking slots. Board positions. Media interviews. Consulting clients. They Google candidates. Your competitor with 5 years and a blog beats your 20 years of silence.</p>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <img src="writing.jpg" alt="Person frustrated at laptop with blank screen" class="problem-image">
+                    <div class="problem-content">
+                        <h3>Sharing Expertise Feels Impossible</h3>
+                        <p>You know you should post. Open blank screen. Stare. Give up. LinkedIn, Twitter, Medium, newsletters—each demands different formats. Hours per post. You don't have time.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="callout">"The world needs what you know. But first, the world needs to know you know it."</p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-header">One AI Workspace. Knowledge to Recognition.</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Curate What Matters</h3>
+                        <p>AI monitors sources in YOUR field—ArXiv, Harvard Business Review, PubMed, Financial Times, industry research. Filters noise. Surfaces what's relevant to your expertise.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Develop Your Thinking</h3>
+                        <p>Chat with AI about what you're reading. Ask questions. Debate ideas. Reframe for audiences. Turn consumption into original insights. Not generic ChatGPT—AI that knows YOUR domain.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Create in Your Voice</h3>
+                        <p>AI learns YOUR style from past writing. Generates posts, articles, threads that sound like you. One insight becomes LinkedIn post, Twitter thread, Medium article, newsletter.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Build Your Presence</h3>
+                        <p>One click to all platforms. Track what resonates. AI learns and improves. Everything archived forever. Your professional knowledge base that compounds over time.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result">Result: Recognition that matches your expertise.</div>
+        </div>
+    </section>
+
+    <!-- AI Conversationalist Section -->
+    <section class="conversationalist">
+        <div class="container">
+            <h2 class="section-header">The Difference: AI That Thinks With You, Not For You</h2>
+            <p class="conversationalist-intro">Most AI tools just generate content. Vōcem helps you develop original thinking through conversation—then creates content from those insights.</p>
+            
+            <div class="conversation-example">
+                <div class="example-header">
+                    <h3>How It Works: From Reading to Recognition</h3>
+                    <p>You saved 5 articles about AI regulation in healthcare...</p>
+                </div>
+                
+                <div class="chat-flow">
+                    <div class="chat-message user">
+                        <div class="chat-avatar">You</div>
+                        <div class="chat-content">
+                            <p>"Help me think through these articles on AI regulation."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message assistant">
+                        <div class="chat-avatar">AI</div>
+                        <div class="chat-content">
+                            <p><strong>Explain mode:</strong> "I've synthesized all 5 articles. Three common themes emerge: regulatory uncertainty, liability frameworks, and clinical validation standards. The authors disagree on timeline—FDA thinks 2-3 years, industry experts say 5+. The core debate is whether to regulate the algorithm or the outcome."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message user">
+                        <div class="chat-avatar">You</div>
+                        <div class="chat-content">
+                            <p>"The FDA framework seems too slow. Push back on my thinking."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message assistant">
+                        <div class="chat-avatar">AI</div>
+                        <div class="chat-content">
+                            <p><strong>Debate mode:</strong> "Counter-argument: Speed vs. safety trade-off. The EU's faster approach led to 3 major recalls in 2024. FDA's caution may prevent premature deployment that damages public trust. Also consider: clinical validation takes time regardless of regulatory timeline. What if 'slow' is actually 'thorough'?"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message user">
+                        <div class="chat-avatar">You</div>
+                        <div class="chat-content">
+                            <p>"I want to write a LinkedIn post for healthcare executives about this."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message assistant">
+                        <div class="chat-avatar">AI</div>
+                        <div class="chat-content">
+                            <p><strong>Reframe mode:</strong> "Executives care about liability exposure and competitive positioning. Let me reframe: 'The AI Regulation Paradox—Why Your Competitors' Speed Might Be Your Advantage.' Three angles: risk mitigation, market timing, regulatory arbitrage. Which resonates?"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message user">
+                        <div class="chat-avatar">You</div>
+                        <div class="chat-content">
+                            <p>"Perfect. Draft the post."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message assistant">
+                        <div class="chat-avatar">AI</div>
+                        <div class="chat-content">
+                            <p><strong>Coach mode:</strong> Generates 350-word LinkedIn post in YOUR voice, incorporating insights from the debate, with your unique perspective on regulatory timing. Includes the 5 article citations naturally woven in.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="learning-note">
+                    <p><strong>After you publish:</strong> AI tracks engagement. "This post got 3x your average reach. The 'regulatory arbitrage' angle resonated strongly with C-suite. Next time, lead with business implications." <em>Your voice model improves with every post.</em></p>
+                </div>
+            </div>
+            
+            <div class="conversationalist-callout">
+                <p>"This isn't automation. It's augmentation. AI that helps you think better, not just type faster."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="integrations">
+        <div class="container">
+            <h2 class="section-header">Curate From Anywhere. Publish Everywhere.</h2>
+            
+            <div class="integrations-grid">
+                <!-- Sources -->
+                <div class="integration-group">
+                    <h3>Curate From</h3>
+                    <div class="logo-grid">
+                        <div class="logo-item">
+                            <i class="fas fa-flask"></i>
+                            <span>ArXiv</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>PubMed</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Google Scholar</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>SSRN</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-newspaper"></i>
+                            <span>HBR</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Financial Times</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Bloomberg</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-rss"></i>
+                            <span>RSS Feeds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publishing Platforms -->
+                <div class="integration-group">
+                    <h3>Publish To</h3>
+                    <div class="logo-grid">
+                        <div class="logo-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fab fa-twitter"></i>
+                            <span>X / Twitter</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fab fa-medium"></i>
+                            <span>Medium</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Substack</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Beehiiv</span>
+                        </div>
+                        <div class="logo-item">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Your Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <h2 class="section-header">For Knowledge Workers Who've Earned Their Voice</h2>
+            
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Academic researcher" class="audience-image">
+                    <div class="audience-content">
+                        <h3>Academics & Researchers</h3>
+                        <p>Your papers deserve impact beyond citations. You want speaking invitations, collaborations, public scholarship. You need NSF broader impact without $5K consultants.</p>
+                    </div>
+                </div>
+                
+                <div class="audience-card">
+                    <img src="https://images.pexels.com/photos/8111846/pexels-photo-8111846.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Senior executive" class="audience-image">
+                    <div class="audience-content">
+                        <h3>Senior Executives</h3>
+                        <p>20 years of expertise. You want board seats, advisory roles, media presence. Planning your next chapter. Need visibility without agencies eating 10 hours/week.</p>
+                    </div>
+                </div>
+                
+                <div class="audience-card">
+                    <img src="https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Independent professional" class="audience-image">
+                    <div class="audience-content">
+                        <h3>Independent Professionals</h3>
+                        <p>You want clients to seek you out. Be the recognized authority in your niche. Build sustainable business from expertise, not hustle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="waitlist">
+        <div class="container">
+            <h2>Ready to Get the Recognition Your Expertise Deserves?</h2>
+            <p class="subtext">Join knowledge workers who are done being the best-kept secret in their field.</p>
+            
+            <form class="email-form" action="#" method="POST">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <select name="segment" required>
+                        <option value="">I am a...</option>
+                        <option value="academic">Academic / Researcher</option>
+                        <option value="executive">Senior Executive (VP+)</option>
+                        <option value="professional">Independent Professional / Consultant</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Get Early Access</button>
+                <p class="form-note">Free to join waitlist • Launch Q1 2025 • First 50 members get 50% off forever</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 16px;"><strong>Vōcem</strong> — Where expertise becomes influence</p>
+            <p style="margin-bottom: 16px;">Built by Nola Venture Studios LLC</p>
+            <div>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+                <a href="terms.html" target="_blank">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
